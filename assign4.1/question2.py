@@ -14,3 +14,6 @@ def square(t, length):
 square(bob, 200)
 
 turtle.mainloop()
+
+# output
+# draw square

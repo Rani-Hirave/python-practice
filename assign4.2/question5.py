@@ -14,3 +14,6 @@ bob = turtle.Turtle()
 draw_spiral(bob, n=1000)
 
 turtle.mainloop()
+
+# output
+# draw spiral

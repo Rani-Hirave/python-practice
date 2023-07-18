@@ -24,3 +24,6 @@ def circle(t, r):
 
 circle(bob, 100)
 turtle.mainloop()
+
+# output
+# draw circle

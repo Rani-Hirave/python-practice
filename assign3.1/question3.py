@@ -41,3 +41,17 @@ def output():
     val_func1()
 
 output()
+
+# output
+# python3 assign3.1/question3.py
+# + ---- + ---- +
+# |      |      |
+# |      |      |
+# |      |      |
+# |      |      |
+# + ---- + ---- +
+# |      |      |
+# |      |      |
+# |      |      |
+# |      |      |
+# + ---- + ---- +

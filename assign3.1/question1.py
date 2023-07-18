@@ -12,3 +12,7 @@ def right_justify(s):
  
 # Main
 right_justify("monty")
+
+# output
+# python3 assign3.1/question1.py
+#                                                                  monty

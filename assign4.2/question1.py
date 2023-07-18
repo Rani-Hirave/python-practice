@@ -37,3 +37,6 @@ bob.pd()
 
 circle(bob,radius)
 turtle.mainloop()
+
+# output
+# draw circle with arc

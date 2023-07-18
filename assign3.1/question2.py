@@ -34,3 +34,19 @@ def do_four(f, arg):
     do_twice(f, arg)
 
 do_four(print_twice, arg)
+
+# output
+# python3 assign3.1/question2.py
+# spam
+# spam
+# spam
+# spam
+
+# spam
+# spam
+# spam
+# spam
+# spam
+# spam
+# spam
+# spam

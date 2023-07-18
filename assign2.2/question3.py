@@ -10,3 +10,7 @@ breakfastminute  = (breakfasthour - breakfastinthour)*60 #minutes in double form
 breakfastintminute = int(breakfastminute) #minutes in int format
 
 print('Breakfast is at {}.{}'.format(breakfastinthour,breakfastintminute))
+
+# output
+# python3 assign2.2/question3.py
+# Breakfast is at 7.15

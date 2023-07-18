@@ -39,3 +39,6 @@ draw_pie(bob, 7, size)
 
 bob.hideturtle()
 turtle.mainloop()
+
+# output
+# draw flower with pipe

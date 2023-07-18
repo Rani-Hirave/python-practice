@@ -22,3 +22,7 @@ def polygon(t, length, n):
 polygon(bob,30,15)
 
 turtle.mainloop()
+
+
+# output
+# draw square with circle

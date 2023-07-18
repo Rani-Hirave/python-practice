@@ -43,3 +43,6 @@ flower(bob, 20, 120.0, 20.0)
 
 bob.hideturtle()
 turtle.mainloop()
+
+# output
+# draw flowers

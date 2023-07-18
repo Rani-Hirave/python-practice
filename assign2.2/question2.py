@@ -14,3 +14,7 @@ shipping = shipingaditionalcopy * 59 - 1 + shipingcostfirst
 totalcost = bookDiscountAmount + shipping
 
 print("totalcost is: " + str(totalcost))
+
+# output
+# python3 assign2.2/question2.py
+# totalcost is: 642.1
