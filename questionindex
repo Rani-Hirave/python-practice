@@ -1,0 +1,893 @@
+# Exercises
+# Exercise 1.1. 
+It is a good idea to read this book in front of a computer so you can try out the
+examples as you go.
+Whenever you are experimenting with a new feature, you should try to make mistakes. For example,
+in the “Hello, world!” program, what happens if you leave out one of the quotation marks? What if
+you leave out both? What if you spell print wrong?
+This kind of experiment helps you remember what you read; it also helps when you are programming,
+because you get to know what the error messages mean. It is better to make mistakes now and on
+purpose than later and accidentally.
+1. In a print statement, what happens if you leave out one of the parentheses, or both?
+2. If you are trying to print a string, what happens if you leave out one of the quotation marks,
+or both?
+3. You can use a minus sign to make a negative number like -2 . What happens if you put a plus
+sign before a number? What about 2++2 ?
+4. In math notation, leading zeros are ok, as in 09 . What happens if you try this in Python?
+What about 011 ?
+5. What happens if you have two values with no operator between them?
+# Exercise 1.2.
+Start the Python interpreter and use it as a calculator.
+1. How many seconds are there in 42 minutes 42 seconds?
+2. How many miles are there in 10 kilometers? Hint: there are 1.61 kilometers in a mile.
+3. If you run a 10 kilometer race in 42 minutes 42 seconds, what is your average pace (time per
+mile in minutes and seconds)? What is your average speed in miles per hour?
+
+# Exercise 2.1.
+Repeating my advice from the previous chapter, whenever you learn a new feature,
+you should try it out in interactive mode and make errors on purpose to see what goes wrong.
+• We’ve seen that n = 42 is legal. What about 42 = n ?
+• How about x = y = 1 ?
+• In some languages every statement ends with a semi-colon, ; . What happens if you put a
+semi-colon at the end of a Python statement?
+• What if you put a period at the end of a statement?
+• In math notation you can multiply x and y like this: xy. What happens if you try that in
+Python?
+# Exercise 2.2. 
+Practice using the Python interpreter as a calculator:
+1. The volume of a sphere with radius r is 3 4 πr 3 . What is the volume of a sphere with radius 5?
+2. Suppose the cover price of a book is $24.95, but bookstores get a 40% discount. Shipping costs
+$3 for the first copy and 75 cents for each additional copy. What is the total wholesale cost for
+60 copies?
+3. If I leave my house at 6:52 am and run 1 mile at an easy pace (8:15 per mile), then 3 miles at
+tempo (7:12 per mile) and 1 mile at easy pace again, what time do I get home for breakfast?
+
+# Exercise 3.1.
+Write a function named right_justify that takes a string named s as a parameter
+and prints the string with enough leading spaces so that the last letter of the string is in column 70
+of the display.
+>>> right_justify('monty')
+monty
+Hint: Use string concatenation and repetition. Also, Python provides a built-in function called len
+that returns the length of a string, so the value of len('monty') is 5.
+# Exercise 3.2.
+A function object is a value you can assign to a variable or pass as an argument. For
+example, do_twice is a function that takes a function object as an argument and calls it twice:
+def do_twice(f):
+f()
+f()
+Here’s an example that uses do_twice to call a function named print_spam twice.
+def print_spam():
+print('spam')
+do_twice(print_spam)
+1. Type this example into a script and test it.
+2. Modify do_twice so that it takes two arguments, a function object and a value, and calls the
+function twice, passing the value as an argument.
+3. Copy the definition of print_twice from earlier in this chapter to your script.
+4. Use the modified version of do_twice to call print_twice twice, passing 'spam' as an
+argument.
+5. Define a new function called do_four that takes a function object and a value and calls the
+function four times, passing the value as a parameter. There should be only two statements in
+the body of this function, not four.
+Solution: http: // thinkpython2. com/ code/ do_ four. py .
+# Exercise 3.3.
+Note: This exercise should be done using only the statements and other features we
+have learned so far.
+1. Write a function that draws a grid like the following:
++ - - - - + - - - - +
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
++ - - - - + - - - - +
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
++ - - - - + - - - - +
+Hint: to print more than one value on a line, you can print a comma-separated sequence of
+values:
+print('+', '-')
+By default, print advances to the next line, but you can override that behavior and put a
+space at the end, like this:
+print('+', end=' ')
+print('-')
+The output of these statements is '+ -' on the same line. The output from the next print
+statement would begin on the next line.
+2. Write a function that draws a similar grid with four rows and four columns.
+Solution: http: // thinkpython2. com/ code/ grid. py . Credit: This exercise is based on an
+exercise in Oualline, Practical C Programming, Third Edition, O’Reilly Media, 1997.
+
+# Exercise 4.1. 
+Download the code in this chapter from http: // thinkpython2. com/ code/
+polygon. py .
+1. Draw a stack diagram that shows the state of the program while executing circle(bob,
+radius) . You can do the arithmetic by hand or add print statements to the code.
+2. The version of arc in Section 4.7 is not very accurate because the linear approximation of the
+circle is always outside the true circle. As a result, the Turtle ends up a few pixels away from
+the correct destination. My solution shows a way to reduce the effect of this error. Read the
+code and see if it makes sense to you. If you draw a diagram, you might see how it works.
+# Exercise 4.2. 
+Write an appropriately general set of functions that can draw flowers as in Figure 4.1.
+Solution:
+http: // thinkpython2. com/ code/ flower. py ,
+also requires http:
+// thinkpython2. com/ code/ polygon. py .
+# Exercise 4.3.
+Write an appropriately general set of functions that can draw shapes as in Figure 4.2.
+Solution: http: // thinkpython2. com/ code/ pie. py .
+# Exercise 4.4. 
+The letters of the alphabet can be constructed from a moderate number of basic ele-
+ments, like vertical and horizontal lines and a few curves. Design an alphabet that can be drawn
+with a minimal number of basic elements and then write functions that draw the letters.
+You should write one function for each letter, with names draw_a , draw_b , etc., and put your
+functions in a file named letters.py . You can download a “turtle typewriter” from http: //
+thinkpython2. com/ code/ typewriter. py to help you test your code.
+
+# Exercise 5.1.
+The time module provides a function, also named time , that returns the current
+Greenwich Mean Time in “the epoch”, which is an arbitrary time used as a reference point. On
+UNIX systems, the epoch is 1 January 1970.
+>>> import time
+>>> time.time()
+1437746094.5735958
+Write a script that reads the current time and converts it to a time of day in hours, minutes, and
+seconds, plus the number of days since the epoch.
+# Exercise 5.2. 
+Fermat’s Last Theorem says that there are no positive integers a, b, and c such that
+a n + b n = c n
+for any values of n greater than 2.
+1. Write a function named check_fermat that takes four parameters— a , b , c and n —and
+checks to see if Fermat’s theorem holds. If n is greater than 2 and
+a n + b n = c n
+the program should print, “Holy smokes, Fermat was wrong!” Otherwise the program should
+print, “No, that doesn’t work.”
+2. Write a function that prompts the user to input values for a , b , c and n , converts them to
+integers, and uses check_fermat to check whether they violate Fermat’s theorem.
+# Exercise 5.3. 
+If you are given three sticks, you may or may not be able to arrange them in a triangle.
+For example, if one of the sticks is 12 inches long and the other two are one inch long, you will not
+be able to get the short sticks to meet in the middle. For any three lengths, there is a simple test to
+see if it is possible to form a triangle:
+If any of the three lengths is greater than the sum of the other two, then you cannot
+form a triangle. Otherwise, you can. (If the sum of two lengths equals the third, they
+form what is called a “degenerate” triangle.)
+1. Write a function named is_triangle that takes three integers as arguments, and that prints
+either “Yes” or “No”, depending on whether you can or cannot form a triangle from sticks
+with the given lengths.
+2. Write a function that prompts the user to input three stick lengths, converts them to integers,
+and uses is_triangle to check whether sticks with the given lengths can form a triangle.
+# Exercise 5.4. 
+What is the output of the following program? Draw a stack diagram that shows the
+state of the program when it prints the result.
+def recurse(n, s):
+if n == 0:
+print(s)
+else:
+recurse(n-1, n+s)
+recurse(3, 0)
+1. What would happen if you called this function like this: recurse(-1, 0) ?
+2. Write a docstring that explains everything someone would need to know in order to use this
+function (and nothing else).
+The following exercises use the turtle module, described in Chapter 4:
+# Exercise 5.5. 
+Read the following function and see if you can figure out what it does (see the exam-
+ples in Chapter 4). Then run it and see if you got it right.
+5.2: A Koch curve.
+def draw(t, length, n):
+if n == 0:
+return
+angle = 50
+t.fd(length*n)
+t.lt(angle)
+draw(t, length, n-1)
+t.rt(2*angle)
+draw(t, length, n-1)
+t.lt(angle)
+t.bk(length*n)
+# Exercise 5.6. 
+The Koch curve is a fractal that looks something like Figure 5.2. To draw a Koch
+curve with length x, all you have to do is
+1. Draw a Koch curve with length x/3.
+2. Turn left 60 degrees.
+3. Draw a Koch curve with length x/3.
+4. Turn right 120 degrees.
+5. Draw a Koch curve with length x/3.
+6. Turn left 60 degrees.
+7. Draw a Koch curve with length x/3.
+The exception is if x is less than 3: in that case, you can just draw a straight line with length x.
+1. Write a function called koch that takes a turtle and a length as parameters, and that uses the
+turtle to draw a Koch curve with the given length.
+2. Write a function called snowflake that draws three Koch curves to make the outline of a
+snowflake.
+Solution: http: // thinkpython2. com/ code/ koch. py .
+3. The Koch curve can be generalized in several ways. See http: // en. wikipedia. org/
+wiki/ Koch_ snowflake for examples and implement your favorite.
+
+# Exercise 6.1. 
+Draw a stack diagram for the following program. What does the program print?
+def b(z):
+prod = a(z, z)
+print(z, prod)
+return prod
+def a(x, y):
+x = x + 1
+return x * y
+def c(x, y, z):
+total = x + y + z
+square = b(total)**2
+return square
+x = 1
+y = x + 1
+print(c(x, y+3, x+y))
+# Exercise 6.2. 
+The Ackermann function, A ( m, n ) , is defined:
+
+
+ n + 1
+A ( m, n ) = A ( m − 1, 1 )
+
+
+A ( m − 1, A ( m, n − 1 ))
+if m = 0
+if m > 0 and n = 0
+if m > 0 and n > 0.
+See http: // en. wikipedia. org/ wiki/ Ackermann_ function . Write a function named ack
+that evaluates the Ackermann function. Use your function to evaluate ack(3, 4) , which should be
+125. What happens for larger values of m and n ? Solution: http: // thinkpython2. com/ code/
+ackermann. py .
+# Exercise 6.3. 
+A palindrome is a word that is spelled the same backward and forward, like “noon”
+and “redivider”. Recursively, a word is a palindrome if the first and last letters are the same and the
+middle is a palindrome.
+The following are functions that take a string argument and return the first, last, and middle letters:
+def first(word):
+return word[0]
+def last(word):
+return word[-1]
+def middle(word):
+return word[1:-1]
+We’ll see how they work in Chapter 8.
+1. Type these functions into a file named palindrome.py and test them out. What happens if
+you call middle with a string with two letters? One letter? What about the empty string,
+which is written '' and contains no letters?
+2. Write a function called is_palindrome that takes a string argument and returns True if it
+is a palindrome and False otherwise. Remember that you can use the built-in function len
+to check the length of a string.
+Solution: http: // thinkpython2. com/ code/ palindrome_ soln. py .
+# Exercise 6.4. 
+A number, a, is a power of b if it is divisible by b and a/b is a power of b. Write a
+function called is_power that takes parameters a and b and returns True if a is a power of b . Note:
+you will have to think about the base case.
+# Exercise 6.5. 
+The greatest common divisor (GCD) of a and b is the largest number that divides
+both of them with no remainder.
+One way to find the GCD of two numbers is based on the observation that if r is the remainder when
+a is divided by b, then gcd ( a, b ) = gcd ( b, r ) . As a base case, we can use gcd ( a, 0 ) = a.
+Write a function called gcd that takes parameters a and b and returns their greatest common divisor.
+Credit: This exercise is based on an example from Abelson and Sussman’s Structure and Interpre-
+tation of Computer Programs.
+
+# Exercise 7.1. 
+Copy the loop from Section 7.5 and encapsulate it in a function called mysqrt that
+takes a as a parameter, chooses a reasonable value of x , and returns an estimate of the square root of
+a .
+To test it, write a function named test_square_root that prints a table like this:
+a
+mysqrt(a)
+math.sqrt(a) diff
+-
+---------
+------------ ----
+1.0 1.0
+1.0
+0.0
+2.0 1.41421356237 1.41421356237 2.22044604925e-16
+3.0 1.73205080757 1.73205080757 0.0
+4.0 2.0
+2.0
+0.0
+5.0 2.2360679775 2.2360679775 0.0
+6.0 2.44948974278 2.44948974278 0.0
+7.0 2.64575131106 2.64575131106 0.0
+8.0 2.82842712475 2.82842712475 4.4408920985e-16
+9.0 3.0
+3.0
+0.0
+The first column is a number, a; the second column is the square root of a computed with mysqrt ;
+the third column is the square root computed by math.sqrt ; the fourth column is the absolute value
+of the difference between the two estimates.
+# Exercise 7.2. 
+The built-in function eval takes a string and evaluates it using the Python inter-
+preter. For example:
+>>> eval('1 + 2 * 3')
+7
+>>> import math
+>>> eval('math.sqrt(5)')
+2.2360679774997898
+>>> eval('type(math.pi)')
+<class 'float'>
+Write a function called eval_loop that iteratively prompts the user, takes the resulting input and
+evaluates it using eval , and prints the result.
+It should continue until the user enters 'done' , and then return the value of the last expression it
+evaluated.
+
+# Exercise 7.3. 
+The mathematician Srinivasa Ramanujan found an infinite series that can be used to
+generate a numerical approximation of 1/π:
+√
+2 2 ∞ ( 4k ) ! ( 1103 + 26390k )
+1
+=
+π
+9801 k ∑
+( k! ) 4 396 4k
+= 0
+Write a function called estimate_pi that uses this formula to compute and return an estimate of
+π. It should use a while loop to compute terms of the summation until the last term is smaller than
+1e-15 (which is Python notation for 10 − 15 ). You can check the result by comparing it to math.pi .
+Solution: http: // thinkpython2. com/ code/ pi. py .
+
+# Exercise 8.1. 
+Read the documentation of the string methods at http: // docs. python. org/ 3/
+library/ stdtypes. html# string-methods . You might want to experiment with some of them
+to make sure you understand how they work. strip and replace are particularly useful.
+The documentation uses a syntax that might be confusing.
+For example, in
+find(sub[, start[, end]]) , the brackets indicate optional arguments. So sub is required, but
+start is optional, and if you include start , then end is optional.
+# Exercise 8.2.
+There is a string method called count that is similar to the function in Section 8.7.
+Read the documentation of this method and write an invocation that counts the number of a ’s in
+'banana' .
+# Exercise 8.3.
+A string slice can take a third index that specifies the “step size”; that is, the number
+of spaces between successive characters. A step size of 2 means every other character; 3 means every
+third, etc.
+>>> fruit = 'banana'
+>>> fruit[0:5:2]
+'bnn'
+A step size of -1 goes through the word backwards, so the slice [::-1] generates a reversed string.
+Use this idiom to write a one-line version of is_palindrome from Exercise 6.3.
+# Exercise 8.4. 
+The following functions are all intended to check whether a string contains any
+lowercase letters, but at least some of them are wrong. For each function, describe what the function
+actually does (assuming that the parameter is a string).
+def any_lowercase1(s):
+for c in s:
+if c.islower():
+return True
+else:
+return False
+def any_lowercase2(s):
+for c in s:
+if 'c'.islower():
+return 'True'
+else:
+return 'False'
+def any_lowercase3(s):
+for c in s:
+flag = c.islower()
+return flag
+def any_lowercase4(s):
+flag = False
+for c in s:
+flag = flag or c.islower()
+return flag
+def any_lowercase5(s):
+for c in s:
+if not c.islower():
+return False
+return True
+# Exercise 8.5. 
+A Caesar cypher is a weak form of encryption that involves “rotating” each letter by
+a fixed number of places. To rotate a letter means to shift it through the alphabet, wrapping around
+to the beginning if necessary, so ’A’ rotated by 3 is ’D’ and ’Z’ rotated by 1 is ’A’.
+To rotate a word, rotate each letter by the same amount. For example, “cheer” rotated by 7 is “jolly”
+and “melon” rotated by -10 is “cubed”. In the movie 2001: A Space Odyssey, the ship computer
+is called HAL, which is IBM rotated by -1.
+Write a function called rotate_word that takes a string and an integer as parameters, and returns
+a new string that contains the letters from the original string rotated by the given amount.
+You might want to use the built-in function ord , which converts a character to a numeric code, and
+chr , which converts numeric codes to characters. Letters of the alphabet are encoded in alphabetical
+order, so for example:
+>>> ord('c') - ord('a')
+2
+Because 'c' is the two-eth letter of the alphabet. But beware: the numeric codes for upper case
+letters are different.
+Potentially offensive jokes on the Internet are sometimes encoded in ROT13, which is a Caesar
+cypher with rotation 13. If you are not easily offended, find and decode some of them. Solution:
+http: // thinkpython2. com/ code/ rotate. py .
+
+# Exercise 9.7. 
+This question is based on a Puzzler that was broadcast on the radio program Car
+Talk ( http: // www. cartalk. com/ content/ puzzlers ):
+Give me a word with three consecutive double letters. I’ll give you a couple of words
+that almost qualify, but don’t. For example, the word committee, c-o-m-m-i-t-t-e-e. It
+would be great except for the ‘i’ that sneaks in there. Or Mississippi: M-i-s-s-i-s-s-i-
+p-p-i. If you could take out those i’s it would work. But there is a word that has three
+consecutive pairs of letters and to the best of my knowledge this may be the only word.
+Of course there are probably 500 more but I can only think of one. What is the word?
+Write a program to find it. Solution: http: // thinkpython2. com/ code/ cartalk1. py .
+# Exercise 9.8. 
+Here’s another Car Talk Puzzler ( http: // www. cartalk. com/ content/
+puzzlers ):
+“I was driving on the highway the other day and I happened to notice my odometer.
+Like most odometers, it shows six digits, in whole miles only. So, if my car had 300,000
+miles, for example, I’d see 3-0-0-0-0-0.
+“Now, what I saw that day was very interesting. I noticed that the last 4 digits were
+palindromic; that is, they read the same forward as backward. For example, 5-4-4-5 is a
+palindrome, so my odometer could have read 3-1-5-4-4-5.
+“One mile later, the last 5 numbers were palindromic. For example, it could have read
+3-6-5-4-5-6. One mile after that, the middle 4 out of 6 numbers were palindromic. And
+you ready for this? One mile later, all 6 were palindromic!
+“The question is, what was on the odometer when I first looked?”
+Write a Python program that tests all the six-digit numbers and prints any numbers that satisfy
+these requirements. Solution: http: // thinkpython2. com/ code/ cartalk2. py .
+# Exercise 9.9. 
+Here’s another Car Talk Puzzler you can solve with a search ( http: // www.
+cartalk. com/ content/ puzzlers ):
+“Recently I had a visit with my mom and we realized that the two digits that make
+up my age when reversed resulted in her age. For example, if she’s 73, I’m 37. We
+wondered how often this has happened over the years but we got sidetracked with other
+topics and we never came up with an answer.
+“When I got home I figured out that the digits of our ages have been reversible six times
+so far. I also figured out that if we’re lucky it would happen again in a few years, and
+if we’re really lucky it would happen one more time after that. In other words, it would
+have happened 8 times over all. So the question is, how old am I now?”
+Write a Python program that searches for solutions to this Puzzler. Hint: you might find the string
+method zfill useful.
+Solution: http: // thinkpython2. com/ code/ cartalk3. py .
+You can download solutions to these exercises from http://thinkpython2.com/code/
+list_exercises.py .
+
+# Exercise 10.1.
+Write a function called nested_sum that takes a list of lists of integers and adds up
+the elements from all of the nested lists. For example:
+>>> t = [[1, 2], [3], [4, 5, 6]]
+>>> nested_sum(t)
+21
+# Exercise 10.2. 
+Write a function called cumsum that takes a list of numbers and returns the cumu-
+lative sum; that is, a new list where the ith element is the sum of the first i + 1 elements from the
+original list. For example:
+>>> t = [1, 2, 3]
+>>> cumsum(t)
+[1, 3, 6]
+# Exercise 10.3. 
+Write a function called middle that takes a list and returns a new list that contains
+all but the first and last elements. For example:
+>>> t = [1, 2, 3, 4]
+>>> middle(t)
+[2, 3]
+# Exercise 10.4. 
+Write a function called chop that takes a list, modifies it by removing the first and
+last elements, and returns None . For example:
+>>> t = [1, 2, 3, 4]
+>>> chop(t)
+>>> t
+[2, 3]
+# Exercise 10.5. 
+Write a function called is_sorted that takes a list as a parameter and returns True
+if the list is sorted in ascending order and False otherwise. For example:
+>>> is_sorted([1, 2, 2])
+True
+>>> is_sorted(['b', 'a'])
+False
+# Exercise 10.6. 
+Two words are anagrams if you can rearrange the letters from one to spell the other.
+Write a function called is_anagram that takes two strings and returns True if they are anagrams.
+Exercise 10.7. Write a function called has_duplicates that takes a list and returns True if there
+is any element that appears more than once. It should not modify the original list.
+# Exercise 10.8. 
+This exercise pertains to the so-called Birthday Paradox, which you can read about
+at http: // en. wikipedia. org/ wiki/ Birthday_ paradox .
+If there are 23 students in your class, what are the chances that two of them have the same birthday?
+You can estimate this probability by generating random samples of 23 birthdays and checking for
+matches. Hint: you can generate random birthdays with the randint function in the random
+module.
+You can download my solution from http: // thinkpython2. com/ code/ birthday. py .
+# Exercise 10.9. 
+Write a function that reads the file words.txt and builds a list with one element
+per word. Write two versions of this function, one using the append method and the other using
+the idiom t = t + [x] . Which one takes longer to run? Why?
+Solution: http: // thinkpython2. com/ code/ wordlist. py .
+# Exercise 10.10. 
+To check whether a word is in the word list, you could use the in operator, but it
+would be slow because it searches through the words in order.
+Because the words are in alphabetical order, we can speed things up with a bisection search (also
+known as binary search), which is similar to what you do when you look a word up in the dictionary
+(the book, not the data structure). You start in the middle and check to see whether the word you are
+looking for comes before the word in the middle of the list. If so, you search the first half of the list
+the same way. Otherwise you search the second half.
+Either way, you cut the remaining search space in half. If the word list has 113,809 words, it will
+take about 17 steps to find the word or conclude that it’s not there.
+Write a function called in_bisect that takes a sorted list and a target value and returns True if
+the word is in the list and False if it’s not.
+Or you could read the documentation of the bisect module and use that! Solution: http: //
+thinkpython2. com/ code/ inlist. py .
+# Exercise 10.11. 
+Two words are a “reverse pair” if each is the reverse of the other. Write a program
+that finds all the reverse pairs in the word list. Solution: http: // thinkpython2. com/ code/
+reverse_ pair. py .
+# Exercise 10.12. 
+Two words “interlock” if taking alternating letters from each forms a new
+word. For example, “shoe” and “cold” interlock to form “schooled”. Solution: http: //
+thinkpython2. com/ code/ interlock. py . Credit: This exercise is inspired by an example at
+http: // puzzlers. org .
+1. Write a program that finds all pairs of words that interlock. Hint: don’t enumerate all pairs!
+2. Can you find any words that are three-way interlocked; that is, every third letter forms a
+word, starting from the first, second or third?
+
+# Exercise 11.1. 
+Write a function that reads the words in words.txt and stores them as keys in a
+dictionary. It doesn’t matter what the values are. Then you can use the in operator as a fast way to
+check whether a string is in the dictionary.
+If you did Exercise 10.10, you can compare the speed of this implementation with the list in operator
+and the bisection search.
+# Exercise 11.2. 
+Read the documentation of the dictionary method setdefault and use it to write a
+more concise version of invert_dict . Solution: http: // thinkpython2. com/ code/ invert_
+dict. py .
+# Exercise 11.3. 
+Memoize the Ackermann function from Exercise 6.2 and see if memoization
+makes it possible to evaluate the function with bigger arguments. Hint: no. Solution: http:
+// thinkpython2. com/ code/ ackermann_ memo. py .
+# Exercise 11.4. 
+If you did Exercise 10.7, you already have a function named has_duplicates that
+takes a list as a parameter and returns True if there is any object that appears more than once in the
+list.
+Use a dictionary to write a faster, simpler version of has_duplicates . Solution: http: //
+thinkpython2. com/ code/ has_ duplicates. py .
+# Exercise 11.5. 
+Two words are “rotate pairs” if you can rotate one of them and get the other (see
+rotate_word in Exercise 8.5).
+Write a program that reads a wordlist and finds all the rotate pairs. Solution: http: //
+thinkpython2. com/ code/ rotate_ pairs. py .
+# Exercise 11.6. 
+Here’s another Puzzler from Car Talk ( http: // www. cartalk. com/ content/
+puzzlers ):
+This was sent in by a fellow named Dan O’Leary. He came upon a common one-syllable,
+five-letter word recently that has the following unique property. When you remove the
+first letter, the remaining letters form a homophone of the original word, that is a word
+that sounds exactly the same. Replace the first letter, that is, put it back and remove
+the second letter and the result is yet another homophone of the original word. And the
+question is, what’s the word?
+Now I’m going to give you an example that doesn’t work. Let’s look at the five-letter
+word, ‘wrack.’ W-R-A-C-K, you know like to ‘wrack with pain.’ If I remove the first
+letter, I am left with a four-letter word, ’R-A-C-K.’ As in, ‘Holy cow, did you see the
+rack on that buck! It must have been a nine-pointer!’ It’s a perfect homophone. If you
+put the ‘w’ back, and remove the ‘r,’ instead, you’re left with the word, ‘wack,’ which is
+a real word, it’s just not a homophone of the other two words.
+But there is, however, at least one word that Dan and we know of, which will yield two
+homophones if you remove either of the first two letters to make two, new four-letter
+words. The question is, what’s the word?
+You can use the dictionary from Exercise 11.1 to check whether a string is in the word list.
+To check whether two words are homophones, you can use the CMU Pronouncing Dictionary. You
+can download it from http: // www. speech. cs. cmu. edu/ cgi-bin/ cmudict or from http:
+// thinkpython2. com/ code/ c06d and you can also download http: // thinkpython2.
+com/ code/ pronounce. py , which provides a function named read_dictionary that reads the
+pronouncing dictionary and returns a Python dictionary that maps from each word to a string that
+describes its primary pronunciation.
+Write a program that lists all the words that solve the Puzzler. Solution: http: // thinkpython2.
+com/ code/ homophone. py .
+
+# Exercise 12.1. 
+Write a function called most_frequent that takes a string and prints the let-
+ters in decreasing order of frequency. Find text samples from several different languages and see
+how letter frequency varies between languages. Compare your results with the tables at http:
+// en. wikipedia. org/ wiki/ Letter_ frequencies . Solution: http: // thinkpython2.
+com/ code/ most_ frequent. py .
+# Exercise 12.2. 
+More anagrams!
+1. Write a program that reads a word list from a file (see Section 9.1) and prints all the sets of
+words that are anagrams.
+Here is an example of what the output might look like:
+['deltas', 'desalt', 'lasted', 'salted', 'slated', 'staled']
+['retainers', 'ternaries']
+['generating', 'greatening']
+['resmelts', 'smelters', 'termless']
+Hint: you might want to build a dictionary that maps from a collection of letters to a list
+of words that can be spelled with those letters. The question is, how can you represent the
+collection of letters in a way that can be used as a key?
+2. Modify the previous program so that it prints the longest list of anagrams first, followed by
+the second longest, and so on.
+3. In Scrabble a “bingo” is when you play all seven tiles in your rack, along with a letter on
+the board, to form an eight-letter word. What collection of 8 letters forms the most possible
+bingos?
+Solution: http: // thinkpython2. com/ code/ anagram_ sets. py .
+# Exercise 12.3. 
+Two words form a “metathesis pair” if you can transform one into the other by
+swapping two letters; for example, “converse” and “conserve”. Write a program that finds all of
+the metathesis pairs in the dictionary. Hint: don’t test all pairs of words, and don’t test all possible
+swaps. Solution: http: // thinkpython2. com/ code/ metathesis. py . Credit: This exercise
+is inspired by an example at http: // puzzlers. org .
+# Exercise 12.4. 
+Here’s another Car Talk Puzzler ( http: // www. cartalk. com/ content/
+puzzlers ):
+What is the longest English word, that remains a valid English word, as you remove its
+letters one at a time?
+Now, letters can be removed from either end, or the middle, but you can’t rearrange any
+of the letters. Every time you drop a letter, you wind up with another English word. If
+you do that, you’re eventually going to wind up with one letter and that too is going
+to be an English word—one that’s found in the dictionary. I want to know what’s the
+longest word and how many letters does it have?
+I’m going to give you a little modest example: Sprite. Ok? You start off with sprite,
+you take a letter off, one from the interior of the word, take the r away, and we’re left
+with the word spite, then we take the e off the end, we’re left with spit, we take the s off,
+we’re left with pit, it, and I.
+Write a program to find all words that can be reduced in this way, and then find the longest one.
+This exercise is a little more challenging than most, so here are some suggestions:
+1. You might want to write a function that takes a word and computes a list of all the words that
+can be formed by removing one letter. These are the “children” of the word.
+2. Recursively, a word is reducible if any of its children are reducible. As a base case, you can
+consider the empty string reducible.
+3. The wordlist I provided, words.txt , doesn’t contain single letter words. So you might want
+to add “I”, “a”, and the empty string.
+4. To improve the performance of your program, you might want to memoize the words that are
+known to be reducible.
+Solution: http: // thinkpython2. com/ code/ reducible. py .
+
+# Exercise 13.1. 
+Write a program that reads a file, breaks each line into words, strips whitespace and
+punctuation from the words, and converts them to lowercase.
+Hint: The string module provides a string named whitespace , which contains space, tab, new-
+line, etc., and punctuation which contains the punctuation characters. Let’s see if we can make
+Python swear:
+>>> import string
+>>> string.punctuation
+'!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+Also, you might consider using the string methods strip , replace and translate .
+# Exercise 13.2. 
+Go to Project Gutenberg ( http: // gutenberg. org ) and download your favorite
+out-of-copyright book in plain text format.
+Modify your program from the previous exercise to read the book you downloaded, skip over the
+header information at the beginning of the file, and process the rest of the words as before.
+Then modify the program to count the total number of words in the book, and the number of times
+each word is used.
+Print the number of different words used in the book. Compare different books by different authors,
+written in different eras. Which author uses the most extensive vocabulary?
+# Exercise 13.3. 
+Modify the program from the previous exercise to print the 20 most frequently used
+words in the book.
+# Exercise 13.4. 
+Modify the previous program to read a word list (see Section 9.1) and then print all
+the words in the book that are not in the word list. How many of them are typos? How many of
+them are common words that should be in the word list, and how many of them are really obscure?
+# Exercise 13.5. 
+Write a function named choose_from_hist that takes a histogram as defined in
+Section 11.2 and returns a random value from the histogram, chosen with probability in proportion
+to frequency. For example, for this histogram:
+>>> t = ['a', 'a', 'b']
+>>> hist = histogram(t)
+>>> hist
+{'a': 2, 'b': 1}
+your function should return 'a' with probability 2/3 and 'b' with probability 1/3.
+# Exercise 13.6. 
+Python provides a data structure called set that provides many common set
+operations. You can read about them in Section 19.5, or read the documentation at http:
+// docs. python. org/ 3/ library/ stdtypes. html# types-set .
+Write a program that uses set subtraction to find words in the book that are not in the word list.
+Solution: http: // thinkpython2. com/ code/ analyze_ book2. py
+# Exercise 13.7. 
+Write a program that uses this algorithm to choose a random word from the book.
+Solution: http: // thinkpython2. com/ code/ analyze_ book3. py .
+# Exercise 13.8. 
+Markov analysis:
+1. Write a program to read a text from a file and perform Markov analysis. The result should be
+a dictionary that maps from prefixes to a collection of possible suffixes. The collection might
+be a list, tuple, or dictionary; it is up to you to make an appropriate choice. You can test your
+program with prefix length two, but you should write the program in a way that makes it easy
+to try other lengths.
+2. Add a function to the previous program to generate random text based on the Markov analysis.
+Here is an example from Emma with prefix length 2:
+He was very clever, be it sweetness or be angry, ashamed or only amused, at such
+a stroke. She had never thought of Hannah till you were never meant for me?" "I
+cannot make speeches, Emma:" he soon cut it all himself.
+For this example, I left the punctuation attached to the words. The result is almost syntacti-
+cally correct, but not quite. Semantically, it almost makes sense, but not quite.
+What happens if you increase the prefix length? Does the random text make more sense?
+# Exercise 13.9. 
+The “rank” of a word is its position in a list of words sorted by frequency: the most
+common word has rank 1, the second most common has rank 2, etc.
+Zipf’s law describes a relationship between the ranks and frequencies of words in natural languages
+( http: // en. wikipedia. org/ wiki/ Zipf's_ law ). Specifically, it predicts that the frequency,
+f , of the word with rank r is:
+f = cr − s
+where s and c are parameters that depend on the language and the text. If you take the logarithm of
+both sides of this equation, you get:
+log f = log c − s log r
+So if you plot log f versus log r, you should get a straight line with slope − s and intercept log c.
+Write a program that reads a text from a file, counts word frequencies, and prints one line for each
+word, in descending order of frequency, with log f and log r. Use the graphing program of your
+choice to plot the results and check whether they form a straight line. Can you estimate the value of
+s?
+Solution: http: // thinkpython2. com/ code/ zipf. py . To run my solution, you need the plot-
+ting module matplotlib . If you installed Anaconda, you already have matplotlib ; otherwise you
+might have to install it.
+
+# Exercise 14.1. 
+Write a function called sed that takes as arguments a pattern string, a replacement
+string, and two filenames; it should read the first file and write the contents into the second file
+(creating it if necessary). If the pattern string appears anywhere in the file, it should be replaced
+with the replacement string.
+If an error occurs while opening, reading, writing or closing files, your program should catch the
+exception, print an error message, and exit. Solution: http: // thinkpython2. com/ code/ sed.
+py .
+# Exercise 14.2. 
+If you download my solution to Exercise 12.2 from http: // thinkpython2. com/
+code/ anagram_ sets. py , you’ll see that it creates a dictionary that maps from a sorted string of
+letters to the list of words that can be spelled with those letters. For example, 'opst' maps to the
+list ['opts', 'post', 'pots', 'spot', 'stop', 'tops'] .
+Write a module that imports anagram_sets and provides two new functions: store_anagrams
+should store the anagram dictionary in a “shelf”; read_anagrams should look up a word and return
+a list of its anagrams. Solution: http: // thinkpython2. com/ code/ anagram_ db. py .
+# Exercise 14.3. 
+In a large collection of MP3 files, there may be more than one copy of the same song,
+stored in different directories or with different file names. The goal of this exercise is to search for
+duplicates.
+1. Write a program that searches a directory and all of its subdirectories, recursively, and returns
+a list of complete paths for all files with a given suffix (like .mp3 ). Hint: os.path provides
+several useful functions for manipulating file and path names.
+2. To recognize duplicates, you can use md5sum to compute a “checksum” for each files. If two
+files have the same checksum, they probably have the same contents.
+3. To double-check, you can use the Unix command diff .
+Solution: http: // thinkpython2. com/ code/ find_ duplicates. py .
+
+# Exercise 15.1. 
+Write a definition for a class named Circle with attributes center and radius ,
+where center is a Point object and radius is a number.
+Instantiate a Circle object that represents a circle with its center at ( 150, 100 ) and radius 75.
+Write a function named point_in_circle that takes a Circle and a Point and returns True if the
+Point lies in or on the boundary of the circle.
+Write a function named rect_in_circle that takes a Circle and a Rectangle and returns True if
+the Rectangle lies entirely in or on the boundary of the circle.
+Write a function named rect_circle_overlap that takes a Circle and a Rectangle and returns
+True if any of the corners of the Rectangle fall inside the Circle. Or as a more challenging version,
+return True if any part of the Rectangle falls inside the Circle.
+Solution: http: // thinkpython2. com/ code/ Circle. py .
+# Exercise 15.2. 
+Write a function called draw_rect that takes a Turtle object and a Rectangle and
+uses the Turtle to draw the Rectangle. See Chapter 4 for examples using Turtle objects.
+Write a function called draw_circle that takes a Turtle and a Circle and draws the Circle.
+Solution: http: // thinkpython2. com/ code/ draw. py .
+Code examples from this chapter are available from http://thinkpython2.com/code/
+Time1.py ; solutions to the exercises are available from http://thinkpython2.com/code/
+Time1_soln.py .
+
+# Exercise 16.1. 
+Write a function called mul_time that takes a Time object and a number and returns
+a new Time object that contains the product of the original Time and the number.
+Then use mul_time to write a function that takes a Time object that represents the finishing time
+in a race, and a number that represents the distance, and returns a Time object that represents the
+average pace (time per mile).
+# Exercise 16.2. 
+The datetime module provides time objects that are similar to the Time objects
+in this chapter, but they provide a rich set of methods and operators. Read the documentation at
+http: // docs. python. org/ 3/ library/ datetime. html .
+1. Use the datetime module to write a program that gets the current date and prints the day of
+the week.
+2. Write a program that takes a birthday as input and prints the user’s age and the number of
+days, hours, minutes and seconds until their next birthday.
+3. For two people born on different days, there is a day when one is twice as old as the other.
+That’s their Double Day. Write a program that takes two birth dates and computes their
+Double Day.
+4. For a little more challenge, write the more general version that computes the day when one
+person is n times older than the other.
+Solution: http: // thinkpython2. com/ code/ double. pyChapter 17
+Classes and methods
+
+# Exercise 17.1. 
+Download the code from this chapter from http: // thinkpython2. com/ code/
+Time2. py . Change the attributes of Time to be a single integer representing seconds since mid-
+night. Then modify the methods (and the function int_to_time ) to work with the new implemen-
+tation. You should not have to modify the test code in main . When you are done, the output should
+be the same as before. Solution: http: // thinkpython2. com/ code/ Time2_ soln. py .
+# Exercise 17.2. 
+This exercise is a cautionary tale about one of the most common, and difficult to
+find, errors in Python. Write a definition for a class named Kangaroo with the following methods:
+1. An __init__ method that initializes an attribute named pouch_contents to an empty list.
+2. A method named put_in_pouch that takes an object of any type and adds it to
+pouch_contents .
+3. A __str__ method that returns a string representation of the Kangaroo object and the con-
+tents of the pouch.
+Test your code by creating two Kangaroo objects, assigning them to variables named kanga and
+roo , and then adding roo to the contents of kanga ’s pouch.
+Download http: // thinkpython2. com/ code/ BadKangaroo. py . It contains a solution to the
+previous problem with one big, nasty bug. Find and fix the bug.
+If you get stuck, you can download http: // thinkpython2. com/ code/ GoodKangaroo. py ,
+which explains the problem and demonstrates a solution.
+
+# Exercise 18.1. 
+For the following program, draw a UML class diagram that shows these classes and
+the relationships among them.
+class PingPongParent:
+pass
+class Ping(PingPongParent):
+def __init__(self, pong):
+self.pong = pong
+class Pong(PingPongParent):
+def __init__(self, pings=None):
+if pings is None:
+self.pings = []
+else:
+self.pings = pings
+def add_ping(self, ping):
+self.pings.append(ping)
+pong = Pong()
+ping = Ping(pong)
+pong.add_ping(ping)
+# Exercise 18.2. 
+Write a Deck method called deal_hands that takes two parameters, the number of
+hands and the number of cards per hand. It should create the appropriate number of Hand objects,
+deal the appropriate number of cards per hand, and return a list of Hands.
+# Exercise 18.3. 
+The following are the possible hands in poker, in increasing order of value and
+decreasing order of probability:
+pair: two cards with the same rank
+two pair: two pairs of cards with the same rank
+three of a kind: three cards with the same rank
+straight: five cards with ranks in sequence (aces can be high or low, so Ace-2-3-4-5 is a straight
+and so is 10-Jack-Queen-King-Ace , but Queen-King-Ace-2-3 is not.)
+flush: five cards with the same suit
+full house: three cards with one rank, two cards with another
+four of a kind: four cards with the same rank
+straight flush: five cards in sequence (as defined above) and with the same suit
+The goal of these exercises is to estimate the probability of drawing these various hands.
+1. Download the following files from http: // thinkpython2. com/ code :
+Card.py : A complete version of the Card , Deck and Hand classes in this chapter.
+PokerHand.py : An incomplete implementation of a class that represents a poker hand, and
+some code that tests it.
+2. If you run PokerHand.py , it deals seven 7-card poker hands and checks to see if any of them
+contains a flush. Read this code carefully before you go on.
+3. Add methods to PokerHand.py named has_pair , has_twopair , etc. that return True or
+False according to whether or not the hand meets the relevant criteria. Your code should
+work correctly for “hands” that contain any number of cards (although 5 and 7 are the most
+common sizes).
+4. Write a method named classify that figures out the highest-value classification for a hand
+and sets the label attribute accordingly. For example, a 7-card hand might contain a flush
+and a pair; it should be labeled “flush”.
+5. When you are convinced that your classification methods are working, the next step is to esti-
+mate the probabilities of the various hands. Write a function in PokerHand.py that shuffles
+a deck of cards, divides it into hands, classifies the hands, and counts the number of times
+various classifications appear.
+6. Print a table of the classifications and their probabilities. Run your program with larger and
+larger numbers of hands until the output values converge to a reasonable degree of accu-
+racy. Compare your results to the values at http: // en. wikipedia. org/ wiki/ Hand_
+rankings .
+Solution: http: // thinkpython2. com/ code/ PokerHandSoln. py .
+
+# Exercise 19.1. 
+The following is a function that computes the binomial coefficient recursively.
+def binomial_coeff(n, k):
+"""Compute the binomial coefficient "n choose k".
+n: number of trials
+k: number of successes
+returns: int
+"""
+if k == 0:
+return 1
+if n == 0:
+return 0
+res = binomial_coeff(n-1, k) + binomial_coeff(n-1, k-1)
+return res
+Rewrite the body of the function using nested conditional expressions.
+One note: this function is not very efficient because it ends up computing the same values over and
+over. You could make it more efficient by memoizing (see Section 11.6). But you will find that it’s
+harder to memoize if you write it using conditional expressions.
