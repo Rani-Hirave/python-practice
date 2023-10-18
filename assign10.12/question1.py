@@ -42,12 +42,12 @@ def three_way_interlock(word_list):
     return interlocking_words
 
 
-# Answer1:
-li = word_list("assign10.12/words.txt")
-print(interlock(li))
-print()
+# # Answer1:
+# li = word_list("assign10.12/words.txt")
+# print(interlock(li))
+# print()
 
-# Answer2:
-print(three_way_interlock(li))
+# # Answer2:
+# print(three_way_interlock(li))
 
 # python3 assign10.12/question1.py
